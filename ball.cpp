@@ -1,0 +1,29 @@
+#include "ball.h"
+#include <QPainter>
+
+Ball::Ball(double x, double y, double r, double vx, double vy, QGraphicsItem *parent):
+    Entity(x, y, 2 * r, 2 * r, vx, vy, parent)
+{}
+
+void Ball::move()
+{
+    Entity::move();
+    if(left() <= FIELD_LEFT || right() >= FIELD_RIGHT)
+    {
+        setVx(-vx());
+    }
+    if(top() <= FIELD_TOP || bottom() >= FIELD_BOTTOM)
+    {
+        setVy(-vy());
+    }
+}
+
+void Ball::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
+{
+    (void)option;
+    (void)widget;
+    painter->setBrush(Qt::red);
+    painter->drawEllipse(boundingRect());
+    painter->setBrush(Qt::NoBrush);
+}
+
