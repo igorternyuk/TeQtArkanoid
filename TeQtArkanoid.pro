@@ -11,7 +11,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = TeQtArkanoid
 TEMPLATE = app
 
-DEFINES += DEBUG
+DEFINES -= DEBUG
 
 SOURCES += main.cpp\
         widget.cpp \

@@ -6,13 +6,14 @@
 
 class Scene;
 class QLCDNumber;
+class QLabel;
 class QGraphicsView;
 
 class Controller : public QObject
 {
     Q_OBJECT
 public:
-    explicit Controller(QGraphicsView *graphicsView, QLCDNumber *display,
+    explicit Controller(QGraphicsView *graphicsView, QLCDNumber *display, QLabel *lblStatus,
                       QObject *parent = nullptr);
 signals:
     void gameStarted();

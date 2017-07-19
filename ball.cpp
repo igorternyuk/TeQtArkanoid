@@ -8,11 +8,11 @@ Ball::Ball(double x, double y, double r, double vx, double vy, QGraphicsItem *pa
 void Ball::move()
 {
     Entity::move();
-    if(left() <= FIELD_LEFT || right() >= FIELD_RIGHT)
+    if(left() <= Arkanoid::FIELD_LEFT || right() >= Arkanoid::FIELD_RIGHT)
     {
         setVx(-vx());
     }
-    if(top() <= FIELD_TOP || bottom() >= FIELD_BOTTOM)
+    if(top() <= Arkanoid::FIELD_TOP || bottom() >= Arkanoid::FIELD_BOTTOM)
     {
         setVy(-vy());
     }

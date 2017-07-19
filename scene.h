@@ -27,8 +27,11 @@ public:
                m_gameState == GameState::INIT;
     }
 
+    GameState gameState() const;
+
 signals:
-    void scoreOrStatusChanged(QString msg);
+    void statusChanged(QString msg);
+    void scoreChanged(int score);
 public slots:
     void startScene();
     void stopScene();
@@ -41,27 +44,27 @@ public slots:
 #endif
 private:
     enum{
-        BALL_X = FIELD_WIDTH / 2,
-        BALL_Y = FIELD_HEIGHT / 2,
+        BALL_X = Arkanoid::FIELD_WIDTH / 3,
+        BALL_Y = Arkanoid::FIELD_HEIGHT / 2,
         BALL_RADIUS = 10,
         BALL_VX  = 2,
-        BALL_VY = -3,
+        BALL_VY = -4,
         BRICK_WIDTH = 60,
         BRICK_HEIGHT = 25,
         BRICKS_ROW_COUNT = 5,
         BRICKS_COLUMN_COUNT = 14,
         BRICKS_VERTICAL_GAP = 2,
         BRICKS_HORIZONTAL_GAP = 2,
-        BRICKS_LEFT = 90,
+        BRICKS_LEFT = 97,
         BRICKS_TOP = 25
     };
     static struct PaddleConsts
     {
-        double PADDLE_X = FIELD_RIGHT * 0.5;
-        double PADDLE_Y = FIELD_BOTTOM * 7 / 8;
-        double PADDLE_WIDTH = 150;
+        double PADDLE_X = Arkanoid::FIELD_RIGHT * 0.5;
+        double PADDLE_Y = Arkanoid::FIELD_BOTTOM * 8 / 9;
+        double PADDLE_WIDTH = 160;
         double PADDLE_HEIGHT = 15;
-        double PADDLE_VX = 15;
+        double PADDLE_VX = 20;
         double PADDLE_VY = 0;
     } paddle_const;
 

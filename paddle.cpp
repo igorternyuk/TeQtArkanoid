@@ -9,7 +9,7 @@ Paddle::Paddle(double x, double y, double w, double h, double vx, double vy,
 
 void Paddle::moveLeft()
 {
-    if(left() >= FIELD_LEFT + fabs(vx()))
+    if(left() >= Arkanoid::FIELD_LEFT + fabs(vx()))
     {
         setVx(-fabs(vx()));
         Entity::move();
@@ -18,7 +18,7 @@ void Paddle::moveLeft()
 
 void Paddle::moveRight()
 {
-    if(right() <= FIELD_RIGHT - fabs(vx()))
+    if(right() <= Arkanoid::FIELD_RIGHT - fabs(vx()))
     {
         setVx(+fabs(vx()));
         Entity::move();

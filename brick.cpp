@@ -48,7 +48,7 @@ void Brick::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWi
         switch(m_type)
         {
             case Type::GREEN:
-                painter->setBrush(Qt::green);
+                painter->setBrush(Qt::darkGreen);
                 break;
             case Type::BLUE:
                 painter->setBrush(Qt::cyan);

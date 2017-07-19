@@ -18,7 +18,7 @@ public:
     ~Widget();
 
 private:
-    enum {SCREEN_WIDTH = 1154, SCREEN_HEIGHT = 625};
+    enum {SCREEN_WIDTH = 1160, SCREEN_HEIGHT = 630, NUM_DIGITS = 4};
     Ui::Widget *ui;
     Controller *m_controller;
     void configureWidgets();

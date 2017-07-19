@@ -8,7 +8,7 @@ void TeThread::run()
 {
     while(true)
     {
-        msleep(TIMER_DELAY);
+        msleep(Arkanoid::TIMER_DELAY);
         emit timeOut();
     }
 }
